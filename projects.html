@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Projects | Mahdi Zahin</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="assets/css/style.css" rel="stylesheet">
+  
+
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="/" class="logo">Mahdi Zahin</a>
+      <div class="nav-links">
+        <a href="/">Home</a>
+        <a href="/services.html">Services</a>
+        <a href="/projects.html">Projects</a>
+        <a href="/about.html">About</a>
+        <a href="/contact.html">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container">
+      <h1>My Projects</h1>
+      <p>Explore some of my recent work — from custom software to secure web platforms that drive real business impact.</p>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section class="projects-section">
+    <div class="container">
+      <div class="section-title">
+        <h2>Featured Projects</h2>
+        <p>Delivering innovative IT solutions across industries — with clean code, modern tech stacks, and measurable results.</p>
+      </div>
+
+      <!-- Optional Filters
+      <div class="filters">
+        <button class="filter-btn active">All</button>
+        <button class="filter-btn">Web & Mobile</button>
+        <button class="filter-btn">Cloud & DevOps</button>
+        <button class="filter-btn">AI & Data</button>
+        <button class="filter-btn">Cybersecurity</button>
+      </div>
+      -->
+      <div class="projects-grid">
+        
+        <!-- Project 1 Psynera-->
+        <div class="project-card">
+          <div class="project-thumbnail" style="background-image: url('/assets/img/projects/Psynera_logo.png');"></div>
+          <div class="project-content">
+            <h3>Psynera</h3>
+            <p>Psynera is a family-focused well-being platform created to support parents, children, and individuals through informed guidance and compassionate care. We aim to make psychological and lifestyle support accessible, relatable, and practical.</p>
+            <div class="tech-tags">
+              <span class="tag">Wordpress</span>
+              <span class="tag">php</span>
+            </div>
+            <a href="https://www.psynera.org/" class="btn">Visit</a>
+          </div>
+        </div>
+
+
+        <!-- Project 2 -->
+        <div class="project-card">
+          <div class="project-thumbnail" style="background-image: url('/assets/img/projects/hms.jpg');"></div>
+          <div class="project-content">
+            <h3>Hotel Management System</h3>
+            <p>Customers can book single/double rooms by date, while admin manages room availability and assigns cleaners efficiently.</p>
+            <div class="tech-tags">
+              <span class="tag">Java</span>
+              <span class="tag">Gui</span>
+            </div>
+            <a href="#" class="btn">View Case Study</a>
+          </div>
+        </div>
+
+         <!-- Project 2 -->
+        <div class="project-card">
+          <div class="project-thumbnail" style="background-image: url('/assets/img/projects/hrs.jpg');"></div>
+          <div class="project-content">
+            <h3>Hotel Reservation System</h3>
+            <p>Interactive reservation system with user authentication, room booking, and admin panel.</p>
+            <div class="tech-tags">
+              <span class="tag">php</span>
+            </div>
+            <a href="#" class="btn">View Case Study</a>
+          </div>
+        </div>
+
+       
+
+       
+
+      </div>
+    </div>
+  </section>
+
+</body>
+
+<footer id="main-footer" style="width: 100%;"></footer>
+<script>
+
+  fetch('footer.html')
+    .then(response => {
+      if (!response.ok) throw new Error('Footer file not found');
+      return response.text();
+    })
+    .then(data => {
+      document.getElementById('main-footer').innerHTML = data;
+    })
+    .catch(error => {
+      console.error('Error loading footer:', error);
+      document.getElementById('main-footer').innerHTML = '<p style="text-align:center; color:#f66;">Footer লোড করতে সমস্যা হয়েছে</p>';
+    });
+</script>
+</html>

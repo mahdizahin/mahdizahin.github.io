@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact Us | Mahdi Zahin</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+   <link href="assets/css/style.css" rel="stylesheet">
+  <style>
+    
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="/" class="logo">Mahdi Zahin</a>
+      <div class="nav-links">
+        <a href="/">Home</a>
+        <a href="/services.html">Services</a>
+        <a href="/projects.html">Projects</a>
+        <a href="/about.html">About</a>
+        <a href="/contact.html">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container">
+      <h1>Get in Touch</h1>
+      <p>I'm here to help bring your digital ideas to life. Reach out today — let's discuss how I can support your business growth with reliable IT solutions.</p>
+      <a href="#form" class="btn">Send Message</a>
+    </div>
+  </section>
+
+  <!-- Contact Content -->
+  <section class="contact-section">
+    <div class="container">
+      <div class="contact-grid">
+        
+        <!-- Contact Info
+        <div class="contact-info">
+          <div class="info-card">
+            <span class="info-icon">📍</span>
+            <h3>Our Office</h3>
+            <p>House #12, Road #05, Dhanmondi<br>Dhaka - 1205, Bangladesh</p>
+          </div>
+         -->
+          <div class="info-card">
+            <span class="info-icon">📞</span>
+            <h3>Phone</h3>
+            <p><a href="tel:+8801712345678">+880 1789-071020</a></p>
+          </div>
+
+          <div class="info-card">
+            <span class="info-icon">✉️</span>
+            <h3>Email</h3>
+            <p><a href="mailto:it.mahdi99@gmail.com">it.mahdi99@gmail.com</a></p>
+          </div>
+
+          <div class="info-card">
+            <span class="info-icon">🕒</span>
+            <h3>Working Hours</h3>
+            <p>Sunday - Thursday: 9:00 AM - 6:00 PM</p>
+          </div>
+        </div>
+
+        <!-- Form -->
+        <div class="contact-form" id="form">
+          <h2>Send Us a Message</h2>
+          <form action="#" method="POST"> <!-- Replace # with your form backend (e.g., Formspree, Getform, or your server) -->
+            <div class="form-group">
+              <label for="name">Full Name</label>
+              <input type="text" id="name" name="name" required placeholder="Your name">
+            </div>
+
+            <div class="form-group">
+              <label for="email">Email Address</label>
+              <input type="email" id="email" name="email" required placeholder="your@email.com">
+            </div>
+
+            <div class="form-group">
+              <label for="phone">Phone Number (optional)</label>
+              <input type="tel" id="phone" name="phone" placeholder="+880 1X XXXX XXXX">
+            </div>
+
+            <div class="form-group">
+              <label for="message">Your Message</label>
+              <textarea id="message" name="message" required placeholder="Tell me about your project or question..."></textarea>
+            </div>
+
+            <button type="submit" class="submit-btn">Send Message</button>
+          </form>
+        </div>
+
+      </div>     
+    </div>
+  </section>
+
+</body>
+
+<footer id="main-footer" style="width: 100%;"></footer>
+<script>
+
+  fetch('footer.html')
+    .then(response => {
+      if (!response.ok) throw new Error('Footer file not found');
+      return response.text();
+    })
+    .then(data => {
+      document.getElementById('main-footer').innerHTML = data;
+    })
+    .catch(error => {
+      console.error('Error loading footer:', error);
+      document.getElementById('main-footer').innerHTML = '<p style="text-align:center; color:#f66;">Footer লোড করতে সমস্যা হয়েছে</p>';
+    });
+</script>
+</html>

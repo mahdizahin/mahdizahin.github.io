@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About Us | Mahdi Zahin</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+ <link href="assets/css/style.css" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="/" class="logo">Mahdi Zahin</a>
+      <div class="nav-links">
+        <a href="/">Home</a>
+        <a href="/services.html">Services</a>
+        <a href="/projects.html">Projects</a>
+          <a href="/about.html">About</a>
+        <a href="/contact.html">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container">
+      <h1>About Me</h1>
+      <p>I am a dedicated Computer Science and Engineering student at AIUB, pursuing my Bachelor of Science degree. I build a strong foundation in theory and hands-on development. I consistently excel in software engineering with motivation and precision.
+      <br><br>
+      I master Software Requirement Engineering, Quality Assurance, Development, and Project Management. I command C++, Java, Python, PHP, web technologies, databases, and Git. I deliver secure, user-centric, sustainable solutions across the full development lifecycle.
+      <br><br>
+      I lead standout projects like ReviewVerse, Smart E-Map, Heart Disease Classification, and full-stack hotel systems. I thrive in teams, drive high-quality results, and focus on user satisfaction. I stand ready to contribute to software innovation and technology leadership.</p>
+      <a href="#story" class="btn">More about myself</a>
+    </div>
+  </section>
+
+  <!-- Story Section -->
+  <section class="section" id="story">
+    <div class="container">
+      <div class="about-story">
+        <div class="story-text">
+          <h3>Who am I</h3>
+          <p>Passionate full-stack developer skilled in Laravel, web technologies, and software engineering. Delivers secure, responsive, user-centric solutions with strong problem-solving and project management abilities. Ready to innovate in tech.</p>
+
+          <h3>Education</h3>
+          <h4>Bachelor of Science in Computer Science & Engineering</h4>
+          <h5>2022 - 2025</h5>
+        
+          <a href="https://www.aiub.edu/"><h5>American International University-Bangladesh</h5></a>
+          <p>Pursued a comprehensive BSc in CSE. Gained a strong and proper understanding of development universe through core subjects. Built solid foundation in web development, data structures, algorithms, databases, software development methodologies, and software engineering principles</p>
+
+          <h3>Professional Experience</h3>
+          <h4>Front-end Developer Intern</h4>
+          <h5>2025 - 2026 (jan)</h5>
+        
+          <a href="https://www.neuroflightlab.org/"><h5>NeuroFlight Lab, Dhaka, Bangladesh</h5></a>
+          <p>Developed and enhanced interactive user interfaces for AI research platforms and internal tools using Next.js and Tailwind CSS.
+          <br> <br>
+          Contributed to frontend components of open-source tooling and scalable web applications in the intelligent software stack. 
+          <br> <br>
+          Collaborated with research and development teams to implement responsive, user-centric features for AI-driven dashboards and pipelines.
+           <br> <br>
+          Managed multiple frontend tasks simultaneously under project deadlines, ensuring clean code, performance optimization, and seamless integration with backend systems.</p>
+
+        </div>
+        
+      </div>
+    </div>
+  </section>
+
+  <!-- Mission Vision Values -->
+  <section class="section">
+    <div class="container">
+      <div class="section-title">
+        <h2>My Core Values</h2>
+        <p>What drives me every day — the principles that shape every project and every client relationship.</p>
+      </div>
+
+      <div class="values-grid">
+        <div class="value-card">
+          <div class="value-icon">🚀</div>
+          <h3>Innovation First</h3>
+          <p>I embrace cutting-edge technologies and creative problem-solving to deliver solutions that give my clients a real competitive edge.</p>
+        </div>
+
+        <div class="value-card">
+          <div class="value-icon">🤝</div>
+          <h3>Client-Centric</h3>
+          <p>Your success is my success. I listen, adapt, and partner closely to ensure every project exceeds expectations.</p>
+        </div>
+
+        <div class="value-card">
+          <div class="value-icon">🔍</div>
+          <h3>Quality & Reliability</h3>
+          <p>Every line of code, every deployment, every support interaction — built with meticulous attention to detail and long-term stability in mind.</p>
+        </div>
+
+        <div class="value-card">
+          <div class="value-icon">🌱</div>
+          <h3>Growth Together</h3>
+          <p>I invest in my people, my clients, and the community — believing that collective growth creates the strongest outcomes.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</body>
+
+<footer id="main-footer" style="width: 100%;"></footer>
+<script>
+
+  fetch('footer.html')
+    .then(response => {
+      if (!response.ok) throw new Error('Footer file not found');
+      return response.text();
+    })
+    .then(data => {
+      document.getElementById('main-footer').innerHTML = data;
+    })
+    .catch(error => {
+      console.error('Error loading footer:', error);
+      document.getElementById('main-footer').innerHTML = '<p style="text-align:center; color:#f66;">Footer লোড করতে সমস্যা হয়েছে</p>';
+    });
+</script>
+</html>
